@@ -118,18 +118,17 @@ html, body {
 }
 .padded-multiline {
     line-height: 1.4;
-    padding: 120px 50px 50px 50px;
     width: 1000px;
     height:1000px;
-    margin: 100px 0 0 20px;
+    margin: 200px 0 0 20px;
 }
 
 .padded-multiline span {
     font-family: 'Orbitron';
-    background: rgba(255, 255, 255, 0.55);
-    color: black;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
     display: inline;
-    padding: 0.5rem;
+    padding: 0.2rem;
 
     /* Needs prefixing */
     -webkit-box-decoration-break: clone;
