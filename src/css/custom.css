@@ -11,7 +11,6 @@ html, body {
 
 #page1, #page2, #page3, #page4, #page5, #page6 {
     min-height: 1200px;
-    margin: -20px 0 0 0;
 }
 
 #page1{
@@ -21,14 +20,17 @@ html, body {
     ) , url("../img/star-wars-collage-final-republic-backgrounds-old.jpg");
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
+
 }
 
-#page2{
+#page2 {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
     ), url("../img/forceUnchained.jpg");
     background-size: cover;
+    overflow: hidden;
 }
 #page3{
     background-image: linear-gradient(
@@ -37,6 +39,7 @@ html, body {
     ), url("../img/malgus.jpg");
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 
 }
 #page4{
@@ -45,6 +48,7 @@ html, body {
         rgba(0, 0, 0, 0.5)
     ), url("../img/SWTOR_BountySneak.jpg");
     background-size: cover;
+    overflow: hidden;
 }
 #page5{
     background-image: linear-gradient(
@@ -53,7 +57,7 @@ html, body {
     ), url("../img/mandoGirl.jpeg");
     background-size: cover;
     background-attachment: fixed;
-
+    overflow: hidden;
 }
 #page6{
     background-image: linear-gradient(
@@ -61,10 +65,14 @@ html, body {
         rgba(0, 0, 0, 0.5)
     ), url("../img/trooper.jpg");
     background-size: cover;
+    overflow:hidden;
 }
+/*page Title and blur bar at foot of page*/
 
 #page1 > header {
+    font-family: 'Orbitron';
     color: white;
+    font-size:600%;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -74,6 +82,60 @@ html, body {
     background-attachment: fixed;
     overflow: hidden;
 }
+
+#page1 > header::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: inherit;
+    background-attachment: fixed;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+
+#page1  > header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25)
+}
+
+#page1 > header > p {
+    margin: 0;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+.padded-multiline {
+    line-height: 1.4;
+    padding: 120px 50px 50px 50px;
+    width: 1000px;
+    height:1000px;
+    margin: 100px 0 0 20px;
+}
+
+.padded-multiline span {
+    font-family: 'Orbitron';
+    background: rgba(255, 255, 255, 0.55);
+    color: black;
+    display: inline;
+    padding: 0.5rem;
+
+    /* Needs prefixing */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
 
 
 

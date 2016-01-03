@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            function filterPath(string) {
+                return string
+                    .replace(/^\//,'')
+                    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+                    .replace(/\/$/,'');
+            }
+            var locationPath = filterPath(location.pathname);
+            var scrollElem = scrollableElement('html', 'body');
+
+            $('a[href*=#]').each(function() {
+                var thisPath = filterPath(this.pathname) || locationPath;
+                if (  locationPath == thisPath
+                    && (location.hostname == this.hostname || !this.hostname)
+                    && this.hash.replace(/#/,'') ) {
+                    var $target = $(this.hash), target = this.hash;
+                    if (target) {
+                        var targetOffset = $target.offset().top;
+                        $(this).click(function(event) {
+                            event.preventDefault();
+                            $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+                                location.hash = target;
+                            });
+                        });
+                    }
+                }
+            });
+
+            // use the first element that is "scrollable"
+            function scrollableElement(els) {
+                for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+                    var el = arguments[i],
+                        $scrollElement = $(el);
+                    if ($scrollElement.scrollTop()> 0) {
+                        return el;
+                    } else {
+                        $scrollElement.scrollTop(1);
+                        var isScrollable = $scrollElement.scrollTop()> 0;
+                        $scrollElement.scrollTop(0);
+                        if (isScrollable) {
+                            return el;
+                        }
+                    }
+                }
+                return [];
+            }
+
+        });
+    </script>
+
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Star Wars The Old Republic</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#page1">SWTOR</a></li>
+                <li><a href="#page2">Jedi</a></li>
+                <li><a href="#page3">Sith</a></li>
+                <li><a href="#page4">Bounty Hunter</a></li>
+                <li><a href="#page5">Sith Army</a></li>
+                <li><a href="#page6">Republic Army</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="page1">
+    <header>
+        <p><small>Star Wars</small> The Old Republic</p>
+    </header>
+</div>
+
+<div id="page2">
+    <article>
+        <h1 class="padded-multiline"><span>Jedi:<br> A Jedi was a Force-sensitive individual, most often a member of the Jedi Order, who studied, served, and used the mystical energies of the Force; usually, the light side of the Force. The weapon of a Jedi was the lightsaber, a blade made of pure energy. Jedi fought for peace and justice in the Galactic Republic, usually against their mortal enemy: the Sith, who studied the dark side of the Force.
+
+The Jedi were all but destroyed by the Sith during and after the execution of Order 66, leaving very few Jedi survivors until there was only one known living Jedi, Luke Skywalker, at the end of the Galactic Civil War. </span></h1>
+    </article>
+</div>
+
+<div id="page3" >
+    <header>
+        <p>Sith</p>
+    </header>
+</div>
+
+<div id="page4" id="4">
+    <header>
+        <p>Bounty Hunter</p>
+    </header>
+</div>
+
+<div id="page5">
+    <header>
+        <p>Sith Army</p>
+    </header>
+</div>
+
+<div id="page6">
+    <header>
+        <p>Republic Army</p>
+    </header>
+</div>
+
+
+
+
+</body>
+</html>
