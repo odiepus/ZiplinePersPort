@@ -1,0 +1,82 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html, body {
+    margin:0;
+    padding:0;
+}
+
+#page1, #page2, #page3, #page4, #page5, #page6 {
+    min-height: 1200px;
+    margin: -20px 0 0 0;
+}
+
+#page1{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ) , url("../img/star-wars-collage-final-republic-backgrounds-old.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#page2{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("../img/forceUnchained.jpg");
+    background-size: cover;
+}
+#page3{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("../img/malgus.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+#page4{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("../img/SWTOR_BountySneak.jpg");
+    background-size: cover;
+}
+#page5{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("../img/mandoGirl.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+#page6{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("../img/trooper.jpg");
+    background-size: cover;
+}
+
+#page1 > header {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: inherit;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+
+
+
+
+
