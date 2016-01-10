@@ -116,23 +116,66 @@ html, body {
 * {
     box-sizing: border-box;
 }
-.padded-multiline {
-    line-height: 1.4;
-    width: 1000px;
-    height:1000px;
-    margin: 200px 0 0 20px;
+
+#page2{
+    position: relative;
 }
 
-.padded-multiline span {
-    font-family: 'Orbitron';
-    background: rgba(0, 0, 0, 0.55);
-    color: white;
-    display: inline;
-    padding: 0.2rem;
+#page2 > article{
+    position: absolute;
+    height:180px;
+    width:700px;
+    top:50%;
+    left:50%;
+    margin: -90px 0 0 -350px;
+}
 
-    /* Needs prefixing */
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+#page2 > article > p {
+    font-family: 'Orbitron';
+    font-size:20px;
+    color: ghostwhite;
+}
+
+#page3{
+    position:relative;
+}
+
+#page3 > header{
+    position: absolute;
+    height:400px;
+    width:600px;
+    top:50%;
+    left:50%;
+    margin: -200px 0 0 -300px;
+}
+
+#page3 > header > p{
+    font-family: 'Orbitron';
+    font-size:20px;
+    color: ghostwhite;
+}
+
+#page4{
+    position:relative;
+}
+
+#page4 > header{
+    position: absolute;
+    height: 100px;
+    width:600px;
+    top:50%;
+    left:50%;
+    margin:-50px 0 0 -300px;
+}
+
+#page4 >header > article > p{
+    font-family:'Orbitron';
+    font-size:20px;
+    color: whitesmoke;
+}
+
+span{
+    font-size:40px;
 }
 
 
