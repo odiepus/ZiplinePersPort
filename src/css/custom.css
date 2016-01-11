@@ -137,23 +137,34 @@ html, body {
 }
 
 #page3{
-    position:relative;
+    border: 5px solid lightcoral;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap:wrap;
 }
 
-#page3 > header{
-    position: absolute;
-    height:400px;
-    width:800px;
-    top:50%;
-    left:50%;
-    margin: -200px 0 0 -400px;
+.childPage3{
+    margin:5px;
+    width: 99%;
+    color:ghostwhite;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
 }
 
-#page3 > header > p{
+.childpage3Image{
+    display: flex;
+    justify-content: space-around;
+}
+
+.childPage3 > p {
     font-family: 'Orbitron';
     font-size:30px;
     color: ghostwhite;
 }
+
+
 
 #page4{
     position:relative;
@@ -216,6 +227,7 @@ html, body {
 #page3 > img{
     border-radius: 50%;
 }
+
 
 
 
