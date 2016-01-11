@@ -174,7 +174,7 @@ html, body {
     color: whitesmoke;
 }
 
-#page5 {
+.imperial{
     position: relative;
 }
 
@@ -194,7 +194,7 @@ html, body {
 }
 
 
-#page6 {
+.republic{
     position: relative;
 }
 
