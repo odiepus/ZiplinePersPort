@@ -123,16 +123,16 @@ html, body {
 
 #page2 > article{
     position: absolute;
-    height:180px;
-    width:700px;
+    height:210px;
+    width:1000px;
     top:50%;
     left:50%;
-    margin: -90px 0 0 -350px;
+    margin: -110px 0 0 -500px;
 }
 
 #page2 > article > p {
     font-family: 'Orbitron';
-    font-size:20px;
+    font-size:30px;
     color: ghostwhite;
 }
 
@@ -143,15 +143,15 @@ html, body {
 #page3 > header{
     position: absolute;
     height:400px;
-    width:600px;
+    width:800px;
     top:50%;
     left:50%;
-    margin: -200px 0 0 -300px;
+    margin: -200px 0 0 -400px;
 }
 
 #page3 > header > p{
     font-family: 'Orbitron';
-    font-size:20px;
+    font-size:30px;
     color: ghostwhite;
 }
 
@@ -162,25 +162,60 @@ html, body {
 #page4 > header{
     position: absolute;
     height: 100px;
-    width:600px;
+    width:800px;
     top:50%;
     left:50%;
-    margin:-50px 0 0 -300px;
+    margin:-50px 0 0 -400px;
 }
 
 #page4 >header > article > p{
     font-family:'Orbitron';
-    font-size:20px;
+    font-size:30px;
     color: whitesmoke;
 }
 
-span{
-    font-size:40px;
+#page5 {
+    position: relative;
+}
+
+#page5 > header{
+    position: absolute;
+    width: 800px;
+    height:300px;
+    top:50%;
+    left:50%;
+    margin: -150px 0 0 -400px;
+}
+
+#page5 > header >p{
+    font-family:'Orbitron';
+    font-size:30px;
+    color:whitesmoke;
 }
 
 
+#page6 {
+    position: relative;
+}
 
+#page6 > header{
+    position: absolute;
+    width: 800px;
+    height:300px;
+    top:50%;
+    left:50%;
+    margin: -150px 0 0 -400px;
+}
 
+#page6 > header >p{
+    font-family:'Orbitron';
+    font-size:30px;
+    color:whitesmoke;
+}
+
+#page3 > img{
+    border-radius: 50%;
+}
 
 
 
